@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct TimeRemaining: View {
-    @State var currentDate = Date()
+    // 남은 시간 입력칸 -> 단위를 HH_ss로
+    @State var timeRemaining = 10
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    var body: some View { Text("\(timeRemaining)") .onReceive(timer) { _ in if self.timeRemaining > 0 { self.timeRemaining -= 1 } } }
 
-    var body: some View {
-        Text("\(currentDate)").onReceive(timer) { input in self.currentDate = input }
-        
-        
-    }
+    
 }
 
 struct TimeRemaining_Previews: PreviewProvider {
