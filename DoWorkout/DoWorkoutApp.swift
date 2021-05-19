@@ -11,7 +11,7 @@ import SwiftUI
 struct DoWorkoutApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainHeader()
         }
     }
 }
