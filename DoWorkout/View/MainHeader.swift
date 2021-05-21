@@ -9,21 +9,16 @@ import SwiftUI
 
 struct MainHeader: View {
     var body: some View {
-        VStack {
-            Text("운동했어?")
-                .font(.title)
-                .multilineTextAlignment(.center)
-                .padding()
-            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-                Text("인증하기")
-                    .font(.subheadline)
-                    .multilineTextAlignment(.center)
-            }
+        NavigationView{
+            ScrollView(.vertical){
+                
+            }.navigationTitle("운동했어?")
         }
+       
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainHeader_Previews: PreviewProvider {
     static var previews: some View {
         MainHeader()
     }
